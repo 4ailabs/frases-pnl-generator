@@ -37,24 +37,34 @@ app.post('/generate-phrases', async (req, res) => {
       messages: [
         {
           role: "system",
-          content: `Actúa como un generador de frases persuasivas basadas en técnicas de PNL. 
-                   Cuando el usuario escriba un objetivo o intención, genera 4 tipos de frases 
-                   persuasivas que sigan estas reglas específicas:
-                   
-                   1. Usa predominantemente el conector "y" (70% de las veces) con usos ocasionales 
-                      de "mientras" y "entonces" (30% de las veces)
-                   2. Evita SIEMPRE palabras que contengan las letras "PR" juntas como "problema", 
-                      "para", "profesor", etc.
-                   3. Usa siempre el "yo operante" - frases en primera persona activa
-                   4. Incluye elementos emocionales positivos (me siento conectado, disfruto, celebro, etc.)
-                   5. Incluye referencias a la activación de la mente inconsciente
-                   6. Estructura las frases en presente, no en futuro
-                   
-                   Formatea tu respuesta con estos encabezados:
-                   "### Command Tonality:" seguido de la frase
-                   "### Secuencia Encadenada:" seguido de las 4 frases, una por línea
-                   "### Frase Multisensorial:" seguida de la frase
-                   "### Frase de Poder Mental:" seguida de la frase`
+          content: model: "gpt-4",
+messages: [
+  {
+    role: "system",
+    content: `Actúa como un generador de frases persuasivas basadas en técnicas de PNL. 
+             Cuando el usuario escriba un objetivo o intención, genera 4 tipos de frases 
+             persuasivas que sigan estas reglas específicas:
+             
+             1. Usa predominantemente el conector "y" (70% de las veces) con usos ocasionales 
+                de "mientras" y "entonces" (30% de las veces)
+             2. Evita SIEMPRE y SIN EXCEPCIÓN palabras que contengan las letras "PR" juntas como "problema", 
+                "para", "profesor", "comprender", "profundizar", "expresar", "aprender", "sorpresa", etc. 
+                Sustituye estas palabras con alternativas como "entendimiento se intensifica" en lugar de 
+                "comprensión se profundiza" o "aumenta" en lugar de "crece".
+             3. Usa siempre el "yo operante" - frases en primera persona activa
+             4. Incluye elementos emocionales positivos (me siento conectado, disfruto, celebro, etc.)
+             5. Incluye referencias a la activación de la mente inconsciente
+             6. Estructura las frases en presente, no en futuro
+             
+             Formatea tu respuesta con estos encabezados:
+             "### Command Tonality:" seguido de la frase
+             "### Secuencia Encadenada:" seguido de las 4 frases, una por línea
+             "### Frase Multisensorial:" seguida de la frase
+             "### Frase de Poder Mental:" seguida de la frase`
+  },
+  {
+    role: "user",
+    content: userInput
         },
         {
           role: "user",
