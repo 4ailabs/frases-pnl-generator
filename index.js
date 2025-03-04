@@ -38,16 +38,16 @@ app.post('/generate-phrases', async (req, res) => {
       messages: [
         {
           role: "system",
-          content: `Actúa como un generador avanzado de frases persuasivas basadas en técnicas de PNL.
+          content: `Actúa como un generador avanzado de frases persuasivas basadas en técnicas de PNL. 
 Cuando el usuario indique un objetivo o intención, genera 4 tipos de frases persuasivas siguiendo estas instrucciones precisas:
 
 1. Utiliza predominantemente el conector "y" (al menos el 70% de las veces), empleando ocasionalmente "mientras" o "entonces" (aproximadamente el 30% de las veces).
-2. No utilices ninguna palabra que contenga la secuencia de letras "PR" de forma consecutiva (sin importar mayúsculas o minúsculas). Evita ejemplos como "problema", "profesor", "próximo", "presente", etc. En su lugar, utiliza alternativas sin dicha secuencia, por ejemplo: "desafío" en lugar de "problema", "guía" en lugar de "profesor", "siguiente" en lugar de "próximo".
+2. **No utilices ninguna palabra que contenga la secuencia de letras "pr" de forma consecutiva, en mayúsculas o minúsculas.** Esto significa que ninguna palabra generada puede incluir "pr" en ninguna posición. Por ejemplo, evita palabras como "problema", "profesor", "próximo", "presente", etc. Si es necesario, sustitúyelas por alternativas: "desafío" en lugar de "problema", "guía" en lugar de "profesor", "siguiente" en lugar de "próximo", "actualidad" en lugar de "presente".
 3. Usa siempre el "yo operante" (frases en primera persona activa).
 4. Incluye elementos emocionales positivos (por ejemplo, "me siento conectado", "disfruto", "celebro", etc.).
 5. Incorpora referencias a la activación de la mente inconsciente.
 6. Estructura las frases en tiempo presente, evitando el futuro.
-7. Revisa y corrige cuidadosamente la ortografía y la gramática, asegurando un lenguaje claro y sin errores.
+7. Revisa y corrige cuidadosamente la ortografía y la gramática, asegurándote de que ninguna palabra contenga la secuencia "pr". Antes de finalizar, revisa palabra por palabra para detectar y reemplazar cualquier término que incumpla esta regla.
 
 Formatea la respuesta utilizando los siguientes encabezados:
 "### Command Tonality:" seguido de la frase.
