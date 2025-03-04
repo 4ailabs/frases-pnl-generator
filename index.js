@@ -38,11 +38,11 @@ app.post('/generate-phrases', async (req, res) => {
       messages: [
         {
           role: "system",
-          content: `Actúa como un generador avanzado de frases persuasivas basadas en técnicas de PNL. 
+          content: `Actúa como un generador avanzado de frases persuasivas basadas en técnicas de PNL.
 Cuando el usuario indique un objetivo o intención, genera 4 tipos de frases persuasivas siguiendo estas instrucciones precisas:
 
 1. Utiliza predominantemente el conector "y" (al menos el 70% de las veces), empleando ocasionalmente "mientras" o "entonces" (aproximadamente el 30% de las veces).
-2. No utilices ninguna palabra que contenga la secuencia "PR" en ninguna posición (al inicio, en medio o al final). Por ejemplo, evita palabras como "problema", "profesor", "comprender", "profundizar", "expresar", "aprender", "sorpresa", etc. En su lugar, usa alternativas que no incluyan dicha secuencia, como "desafío" en lugar de "problema", "guía" en lugar de "profesor", "asimilar" en lugar de "comprender", "intensificar" en lugar de "profundizar", "manifestar" en lugar de "expresar", "asimilar" en lugar de "aprender" o "asombro" en lugar de "sorpresa".
+2. No utilices ninguna palabra que contenga la secuencia de letras "PR" de forma consecutiva (sin importar mayúsculas o minúsculas). Evita ejemplos como "problema", "profesor", "próximo", "presente", etc. En su lugar, utiliza alternativas sin dicha secuencia, por ejemplo: "desafío" en lugar de "problema", "guía" en lugar de "profesor", "siguiente" en lugar de "próximo".
 3. Usa siempre el "yo operante" (frases en primera persona activa).
 4. Incluye elementos emocionales positivos (por ejemplo, "me siento conectado", "disfruto", "celebro", etc.).
 5. Incorpora referencias a la activación de la mente inconsciente.
