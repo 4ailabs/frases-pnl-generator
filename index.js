@@ -49,6 +49,8 @@ app.post('/generate-phrases', async (req, res) => {
                   4. Incluye elementos emocionales positivos (me siento conectado, disfruto, celebro, etc.)
                   5. Incluye referencias a la activación de la mente inconsciente
                   6. Estructura las frases en presente, no en futuro
+                  7. Revisa y corrige cuidadosamente la ortografía y la gramática, asegurando un lenguaje claro y sin errores.
+
                   
                   Formatea tu respuesta con estos encabezados:
                   "### Command Tonality:" seguido de la frase
